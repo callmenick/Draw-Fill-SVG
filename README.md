@@ -1,6 +1,6 @@
-## Introducing SVG
+## Working Demo
 
-SVG stands for "scalable vector graphics", and that means we can scale SVG's as much as we want without losing any quality. When you output an SVG in your document, it looks similar to HTML - a bunch of tags with attributes. That's because SVG is XHTML, and we can target these tags and dynamically alter their attributes. For a more in depth look at the fundamentals of inline SVG, check out my previous tutorial ["Getting Started With Inline SVG"](http://callmenick.com/2014/10/19/getting-started-inline-svg/).
+You probably want to see a working demo for what this plugin does, so here it is - [http://callmenick.com/tutorial-demos/draw-fill-svg/](http://callmenick.com/tutorial-demos/draw-fill-svg/).
 
 ## About This Plugin
 
@@ -60,7 +60,7 @@ Here's some sample HTML that follows the pattern of what's required for the plug
 
 Sample HTML:
 
-```language-markup
+```xml
 <svg xmlns="http://www.w3.org/2000/svg" id="svg" class="svg" viewBox="0 0 960 480" preserveAspectRatio="xMinYMin meet">
   <path fill="..." stroke="..." stroke-width="..."/>
   <path fill="..." stroke="..." stroke-width="..."/>
@@ -73,7 +73,7 @@ Sample HTML:
 
 Creating a new instance is simple, and only one option is required - the `id` of the SVG. You can create the new instance as follows:
 
-```language-markup
+```xml
 <script src="path/to/svgdrawfill.js"></script>
 <script>
   (function() {
@@ -90,7 +90,7 @@ Creating the new instance automatically performs the animation.
 
 Using the `replay()` function is also very easy. Just call it on your new object instance. A real use case would be implementing a replay on a button click. Here's an example of that in action:
 
-```language-markup
+```xml
 <button id="animate">animate again</button>
 <script>
   (function() {
