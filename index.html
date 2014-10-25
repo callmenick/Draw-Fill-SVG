@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+  <!-- title and meta -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="description" content="Draw Fill SVG - A JavaScript Plugin For Animating SVG's">
+
+  <title>Draw Fill SVG - A JavaScript Plugin For Animating SVG's</title>
+
+  <!-- css -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto+Slab">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/demo.css">
+
+  <!-- js -->
+  <script src="js/modernizr.js"></script>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <header class="header__primary clearfix">
+    <div class="header__primary--logo">
+      <a href="http://callmenick.com">
+        <img src="img/common/logo.svg" onerror="this.src=logo.png" alt="Call Me Nick - Tutorials, Resources, &amp; Articles for Web Design &amp; Web Development">
+      </a>
+    </div>
+    <nav class="nav__primary">
+      <a class="nav__primary--link tut" data-title="Back To Tutorial" href="http://callmenick.com/?p="></a>
+      <a class="nav__primary--link prev" data-title="Pevious Demo - " href="http://callmenick.com/tutorial-demos/"></a>
+      <a class="nav__primary--link download" data-title="Download Source" href="http://callmenick.com/tutorial-demos/"></a>
+      <a class="nav__primary--link archive" data-title="Tutorial Archives" href="http://callmenick.com/category/tutorials/"></a>
+    </nav>
+  </header><!-- /.primary-header -->
+
+  <main>
+    <div class="container">
+
+      <svg xmlns="http://www.w3.org/2000/svg" id="svg" class="svg" viewBox="0 0 960 480" preserveAspectRatio="xMinYMin meet">
+        <path fill="#B4BEC8" stroke="#B4BEC8" stroke-width="2px" stroke-miterlimit="10" d="M570.14 440.2l-29.165-28.99c-7.103-8.5-6.152-36.718-6.02-40.665H425.048c.133 3.947 1.082 32.164-6.018 40.666l-29.166 28.99c-1.237 1.404-1.712 2.505-1.623 3.37h-.054c.76 7.727 6.664 6.332 13.607 6.332H558.01c6.696 0 12.412 1.27 13.493-5.56.58-.953.274-2.282-1.364-4.14z"/>
+        
+        <path fill="#C8D2DC" stroke="#C8D2DC" stroke-width="2px" stroke-miterlimit="10" d="M727.488 355.125c0 8.514-6.597 15.42-14.738 15.42h-465.5c-8.14 0-14.74-6.906-14.74-15.42V45.42c0-8.517 6.6-15.42 14.74-15.42h465.5c8.142 0 14.738 6.903 14.738 15.42v309.705z"/>
+        
+        <path fill="#fff" stroke="#C8D2DC" stroke-width="2px" stroke-miterlimit="10" d="M489.01 343.713c-.042-4.223 3.447-6.254 3.605-6.352-1.963-2.866-5.018-3.263-6.102-3.31-2.602-.26-5.074 1.53-6.39 1.53s-3.356-1.49-5.506-1.448c-2.836.04-5.445 1.645-6.907 4.182-2.942 5.11-.75 12.672 2.116 16.814 1.4 2.02 3.072 4.305 5.268 4.22 2.114-.08 2.913-1.362 5.467-1.362 2.556 0 3.274 1.363 5.51 1.322 2.273-.04 3.716-2.064 5.105-4.098 1.61-2.35 2.273-4.63 2.313-4.748-.05-.02-4.434-1.7-4.48-6.75M484.807 331.31c1.168-1.41 1.953-3.37 1.738-5.327-1.68.068-3.713 1.12-4.916 2.53-1.08 1.247-2.027 3.245-1.77 5.16 1.87.143 3.784-.95 4.947-2.362"/>
+        
+        <path fill="#3C4650" stroke="#3C4650" stroke-width="2px" stroke-miterlimit="10" d="M727.488 315.527V45.982c0-8.828-6.597-15.982-14.738-15.982h-465.5c-8.14 0-14.74 7.155-14.74 15.982v269.545H727.49z"/>
+        
+        <path fill="#141E28" stroke="#141E28" stroke-width="2px" stroke-miterlimit="10" d="M251.2 48.887h457.205v245.52H251.2z"/>
+      </svg>
+
+    <button id="animate">animate again</button>
+
+    </div>
+  </main><!-- /main -->
+  
+</div><!-- /#wrapper -->
+
+<!-- js -->
+<script src="js/drawfillsvg.min.js"></script>
+<script>
+  (function() {
+    var myAnimation = new DrawFillSVG({
+      elementId: "svg"
+    });
+    document.getElementById("animate").addEventListener( "click", function() {
+      myAnimation.replay();
+    });
+  })();
+</script>
+
+<!-- ads -->
+<script src="js/fusionad.js"></script>
+
+<!-- analytics -->
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-34160351-1']);
+_gaq.push(['_trackPageview']);
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+</body>
+</html>
