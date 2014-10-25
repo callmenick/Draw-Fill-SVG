@@ -42,13 +42,7 @@ This function leverages on transition event listeners, and listens for the endin
 
 ## Replaying The Animation
 
-In the plugin, I created a public `replay` function that restarts the animation from the beginning. This can be called easily on any new instance of the object. There's a demo below to see how this works, so sit tight!
-
-## Dependencies
-
-It goes without saying that this plugin will only work in browsers that support SVGs and transitions. I also used Modernizr's `prefixed()` extension for cross-browser transition end events. This is my preferred method.
-
-Another important point to note is that this plugin targets ONLY paths in the SVG, and not any other basic shapes like `circle` or `rect`. In order for the plugin to work properly, please convert all shapes to paths.
+In the plugin, I created a public `replay` function that restarts the animation from the beginning. This can be called easily on any new instance of the object. There's some demo code below to see how this works, so sit tight!
 
 ## Sample HTML
 
@@ -69,7 +63,7 @@ Sample HTML:
 </svg>
 ```
 
-## Creating A New Instance
+## Creating A New Instance (Plugin Usage)
 
 Creating a new instance is simple, and only one option is required - the `id` of the SVG. You can create the new instance as follows:
 
@@ -103,6 +97,12 @@ Using the `replay()` function is also very easy. Just call it on your new object
   })();
 </script>
 ```
+
+## Dependencies
+
+It goes without saying that this plugin will only work in browsers that support SVGs and transitions. I also used Modernizr's `prefixed()` extension for cross-browser transition end events. This is my preferred method.
+
+Another important point to note is that this plugin targets ONLY paths in the SVG, and not any other basic shapes like `circle` or `rect`. In order for the plugin to work properly, please convert all shapes to paths.
 
 ## Wrap Up
 
