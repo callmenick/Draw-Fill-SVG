@@ -72,12 +72,27 @@
    * DrawFillSVG _init
    *
    * Initialise DrawFillSVG
+   * If objectId is defined, use the object inner svg instead 
    */
 
   DrawFillSVG.prototype._init = function() {
-    this.svg = document.getElementById(this.options.elementId);
-    this.paths = this.svg.querySelectorAll("path");
-    this._initAnimation();
+
+    var __init = function(){
+      this.paths = this.svg.querySelectorAll("path");
+      this._initAnimation();
+    }.bind(this);
+
+    if(this.options.objectId){
+      var object = document.getElementById(this.options.objectId);
+      object.addEventListener("load", function(){
+        this.svg = object.contentDocument.firstChild;
+        __init();
+      }.bind(this));
+    }
+    else {
+        this.svg = document.getElementById(this.options.elementId); 
+      __init();
+    }
   }
 
   /**
