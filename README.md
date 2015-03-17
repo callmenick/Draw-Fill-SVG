@@ -65,7 +65,7 @@ Sample HTML:
 
 ## Creating A New Instance (Plugin Usage)
 
-Creating a new instance is simple, and only one option is required - the `id` of the SVG. You can create the new instance as follows:
+Creating a new instance is simple, and only one option is required - the `id` of the SVG or the `id` of the object containing the SVG. You can create the new instance as follows:
 
 ```xml
 <script src="path/to/svgdrawfill.js"></script>
@@ -73,6 +73,7 @@ Creating a new instance is simple, and only one option is required - the `id` of
   (function() {
     var myAnimation = new DrawFillSVG({
       elementId: "svg"
+      // objectId: "myObjectId"
     });
   })();
 </script>

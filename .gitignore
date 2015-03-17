@@ -3,3 +3,4 @@ _assets/
 Gruntfile.js
 node_modules/
 package.json
+gulpfile.js
