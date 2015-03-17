@@ -76,24 +76,22 @@
    */
 
   DrawFillSVG.prototype._init = function() {
-
-    var __init = function(){
-      this.paths = this.svg.querySelectorAll("path");
-      this._initAnimation();
-    }.bind(this);
-
-    if(this.options.objectId){
-      var object = document.getElementById(this.options.objectId);
-      object.addEventListener("load", function(){
-        this.svg = object.contentDocument.firstChild;
-        __init();
-      }.bind(this));
-    }
+      var __init = function(){
+          this.paths = this.svg.querySelectorAll("path");
+          this._initAnimation();
+      }.bind(this);
+      if(this.options.objectId){
+        var object = document.getElementById(this.options.objectId);
+        window.onload = function(){
+          this.svg = object.contentDocument.firstChild;
+          __init();
+        }.bind(this);
+      }
     else {
         this.svg = document.getElementById(this.options.elementId); 
-      __init();
+        __init();
     }
-  }
+  };
 
   /**
    * DrawFillSVG _initAnimation()
